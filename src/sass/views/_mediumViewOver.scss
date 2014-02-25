@@ -7,3 +7,237 @@
 /*
   @title: Medium view and over (screen only)
  */
+
+%page-background {
+	background-color: #FFF;
+}
+
+%submenu-colors {
+	background-color: #CCC;
+	color: #000;
+}
+
+// TODO: Implement when libsass gets better placeholder support
+// %navigation-links {
+//	a {
+//		&:link {
+//			text-decoration: none;
+//		}
+//
+//		&:hover, &:focus {
+//			text-decoration: underline;
+//		}
+//	}
+//}
+//
+
+body {
+	background: #EEE;
+}
+
+#ogpl-logo {
+	padding: 10px 0;
+}
+
+#wb-bar {
+	min-height: 2.25em;
+	a {
+		color: #FFF;
+	}
+}
+
+#wb-lng {
+	float: right;
+	margin: 0;
+
+	li {
+		border-left: 1px solid #777;
+		list-style-type: none;
+		float: left;
+		padding: 6px 15px;
+		&:first-child {
+			border-left: none;
+		}
+	}
+	a {
+		color: #FFF;
+		text-decoration: none;
+	}
+		
+	.curr {
+		display: block;
+		color: #ccc;
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAYAAAB8ZH1oAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAB90RVh0U29mdHdhcmUATWFjcm9tZWRpYSBGaXJld29ya3MgOLVo0ngAAAA6SURBVAiZY/z//z8DMvj14+s+BgYGBjYObicUif///8Pxz+9f9v2HAigbLodVETbFOBWhK8arCFkxABifl5syjffvAAAAAElFTkSuQmCC) no-repeat scroll center bottom;
+		span {
+			@extend %accessible-invisible;
+		}
+	}
+
+	
+}
+
+#wb-sttl {
+	a {
+		font-size: 1.8em;
+    	text-shadow: 1px 1px 1px #333333;
+		display: table-row;
+		span {
+			display: table-cell;
+			vertical-align: middle;
+			line-height: normal;
+			padding-left: 10px;
+		}
+	}
+}
+
+#wb-srch {
+	margin: 0.5em 0;
+	text-align: right;
+	padding-right: 10px;
+	.form-group {
+		width: 70%;
+	}
+}
+
+#wb-srch, .srch-pnl {
+	.form-control {
+		width: 100%;
+	}
+}
+
+[lang=fr] {
+	#wb-srch {
+		.form-group {
+			width: 60%;
+		}
+	}
+}
+
+#wb-sm {
+	.nvbar {
+		background: #555;
+	}
+
+	ul {
+		&.menu {
+			margin-bottom: 0;
+			> {
+				li {
+					padding: 0;
+					border-left: 1px solid #202A33;
+    				border-right: 1px solid #474747;
+
+					&.active {
+						border-left-color: #CCC;
+						border-right-color: #CCC;
+					}
+				}
+			}
+		}
+	}
+
+	.active {
+		a {
+			@extend %submenu-colors;
+		}
+	}
+	
+	a {
+		display: block;
+		color: #FFF;
+		font-weight: 700;
+		padding: 0.48em 1.17em 0.48em 0.79em;
+		text-decoration: none;
+	}
+
+	.sm {
+		@extend %submenu-colors;
+		border-bottom: 4px solid #0F315B;
+		box-shadow: 0 5px 5px -4px rgba(0, 0, 0, 0.5), 5px 5px 5px -4px rgba(0, 0, 0, 0.5), -5px 5px 5px -4px rgba(0, 0, 0, 0.5);
+		border-radius: 0 0 3px 3px;
+
+		a {
+			@extend %submenu-colors;
+			font-weight: 400;
+
+			// TODO: Implement %navigation-links when libsass gets better placeholder support
+			&:link {
+				text-decoration: none;
+			}
+
+			&:hover, &:focus {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+#wb-bc {
+	.container {
+		@extend %page-background;
+	}
+}
+
+body {
+	> {
+		main {
+			@extend %page-background;
+		}
+
+		header + .container {
+			@extend %page-background;
+		}
+	}
+}
+
+#wb-sec {
+	margin-top: 20px;
+	padding-bottom: 2em;
+	.list-group {
+		margin-bottom: 0;
+		a {
+			&.list-group-item {
+				background: $clrWhite;
+				color: $clrDark;
+				border-radius: 0;
+				margin-top: -1px;
+				text-decoration: none;
+				%secmenu-wet-theme-menuitem-curr-hover-focus {
+					background: darken($clrWhite, 50%);
+					color: lighten($clrDark, 75%);
+				}
+				&.wb-navcurr {
+					@extend %secmenu-wet-theme-menuitem-curr-hover-focus;
+				}
+				&[href] {
+					&:hover, &:focus {
+						@extend %secmenu-wet-theme-menuitem-curr-hover-focus;
+					}
+				}
+			}
+		}
+		.list-group {
+			.list-group-item {
+				background: darken($clrWhite, 10%);
+				color: darken($clrDark, 50%);
+				padding-left: 1.8em;
+			}
+		}
+	}
+}
+
+footer {
+	background: #CF3F0E;
+	border-top: 1px solid #BBBBBB;
+	> {
+		.container {
+			background: #CCC;
+		}
+	}
+}
+
+[dir=rtl] {
+	#wb-srch {
+		text-align: left;
+	}
+}

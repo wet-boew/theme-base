@@ -7,7 +7,7 @@
 		<meta charset="utf-8" />
 		<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
-		<title>{{title}} - {{#i18n "site.title"}}{{/i18n}}</title>
+		<title>{{>pagetitle}}</title>
 		<link href="{{assets}}/assets/favicon.ico" rel="shortcut icon" />
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
 		<!-- Meta data -->
@@ -75,12 +75,10 @@
 			<span data-trgt="mb-pnl" class="wb-menu hide"></span>
 {{/isnt}}
 {{#isnt breadcrumb "false"}}
-	{{#isnt assets "."}}
 			<nav role="navigation" id="wb-bc" property="breadcrumb">
 				<h2>{{#i18n "you-are-here"}}{{/i18n}}</h2>
 				{{>breadcrumbs}}
 			</nav>
-	{{/isnt}}
 {{/isnt}}
 		</header>
 
@@ -91,6 +89,9 @@
 		<main role="main" property="mainContentOfPage" class="{{#is secondarymenu "true"}}col-md-9 col-md-push-3{{else}}container{{/is}}">
 			<h1 id="wb-cont" property="name">{{title}}</h1>
 			{{>body}}
+{{#if page.dateModified}}
+			{{>datemodified}}
+{{/if}}
 		</main>
 {{#is secondarymenu "true"}}
 				<nav role="navigation" id="wb-sec" typeof="SiteNavigationElement" class="col-md-3 col-md-pull-9 visible-md visible-lg">
@@ -102,11 +103,13 @@
 {{/is}}
 
 {{#isnt footer "false"}}
-		<footer role="contentinfo" id="wb-info" class="container visible-md visible-lg">
-			<nav role="navigation" class="row">
-				<h2>{{#i18n "tmpl-site-info"}}{{/i18n}}</h2>
-				{{>footer}}
-			</nav>
+		<footer role="contentinfo" id="wb-info" class="visible-md visible-lg">
+			<div class="container">
+				<nav role="navigation" class="row">
+					<h2>{{#i18n "tmpl-site-info"}}{{/i18n}}</h2>
+					{{>footer}}
+				</nav>
+			</div>
 		</footer>
 {{/isnt}}
 		{{>footerresources}}
