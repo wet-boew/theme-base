@@ -7,3 +7,107 @@
 /*
   @title: All screen views
  */
+
+$banner-gradient-start: #4065B3;
+$banner-gradient-end: #33479E;
+
+%no-breadcrumb-icon {
+	content: none;
+	padding: 0;
+}
+
+body {
+	> {
+		header {
+			background: #CCC;
+		}
+	}
+}
+
+#wb-bar {
+	background: #555;
+	> {
+		.container {
+			background: #333;
+		}
+	}
+}
+
+#wb-bnr {
+	> {
+		.container {
+			background: #CF3F0E;
+		}
+	}
+}
+
+#wb-sttl {
+	a {
+		color: #FFFFFF !important;
+
+		// TODO: Implement %navigation-links when libsass gets better placeholder support
+		&:link {
+			text-decoration: none;
+		}
+
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
+	}
+	small {
+		display: block;
+		font-size: 0.4em;
+		margin-bottom: 4px;
+	}
+}
+
+#wb-bc {
+	.breadcrumb {
+		margin-bottom: 0;
+		background: transparent;
+	}
+
+	li {
+		&:before, &:after {
+			font-family: "Glyphicons Halflings";
+			font-size: 0.7em;
+			color: #333;
+		}
+		&:before {
+			content: "\e092";
+		}
+
+		&:first-child {
+			&:before {
+				@extend %no-breadcrumb-icon;
+			}
+		}
+	}
+}
+
+#wb-dtmd {
+	float: right;
+}
+
+[dir=rtl] {
+	#wb-bc {
+		li {
+			&:before {
+				@extend %no-breadcrumb-icon;
+			}
+			&:after {
+				content: "\e091";
+				padding: 0 5px;
+			}
+			&:first-child {
+				&:after {
+					@extend %no-breadcrumb-icon;
+				}
+			}
+		}
+	}
+
+	#wb-dtmd {
+		float: left;
+	}
+}

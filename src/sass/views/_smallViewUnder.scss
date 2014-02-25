@@ -7,3 +7,102 @@
 /*
   @title: Small view and under (screen only)
  */
+
+#wb-glb-mn {
+	padding: 0;
+
+	> ul {
+		margin: 10px 0;
+
+		a {
+			color: #FFF;
+			font-size: 1.5em;
+		}
+	}
+
+	header {
+		background-color: #33479E;
+	}
+
+	nav {
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+	}
+
+	summary {
+		&:hover, &:focus {
+			background: transparent;
+		}
+	}
+
+	.lng-ofr {
+		text-align: right;
+	}
+
+	.pnl-btn {
+		position: relative;
+		float: right;
+		width: 50%;
+		z-index: 2;
+		li {
+			padding: 3px 0 0;
+			width: 100%;
+		}
+		a {
+			color: #FFF;
+			font-size: 1.5em;
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+#wb-sttl {
+	a {
+		position: relative;
+		z-index: 1;
+		padding-top: 1.125em;
+		font-size: 1.9em;
+		text-shadow: 0 1px 1px #044062;
+	}
+	object, img {
+		position: absolute;
+		top: -27px;
+		margin: 0;
+		width: 158px;
+	}
+}
+
+#wb-bc {
+	.breadcrumb {
+		background: #FFF;
+		border-radius: 0;
+	}
+}
+
+[dir=rtl] {
+	#mb-pnl {
+		.lng-ofr {
+			text-align: left;
+			ul {
+				margin-left: 0;
+			}
+			li {
+				padding-left: 0;
+				padding-right: 10px;
+			}
+		}
+	}
+	#wb-glb-mn {
+		> {
+			ul {
+				text-align: left;
+			}
+		}
+		.pnl-btn {
+			float: left;
+		}
+	}
+}
