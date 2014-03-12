@@ -8,6 +8,7 @@
   @title: Small view and under (screen only)
  */
 
+ 
 #wb-glb-mn {
 	padding: 0;
 
@@ -18,27 +19,6 @@
 			color: #FFF;
 			font-size: 1.5em;
 		}
-	}
-
-	header {
-		background-color: #33479E;
-	}
-
-	nav {
-		a {
-			color: #000;
-			text-decoration: none;
-		}
-	}
-
-	summary {
-		&:hover, &:focus {
-			background: transparent;
-		}
-	}
-
-	.lng-ofr {
-		text-align: right;
 	}
 
 	.pnl-btn {
@@ -56,6 +36,94 @@
 			display: block;
 			width: 100%;
 		}
+	}
+}
+
+#mb-pnl {	
+	header {
+		background-color: #555;
+	}
+
+	nav {
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+	}
+
+	summary {
+		&:hover, &:focus {
+			background: transparent;
+		}
+	}
+
+	.modal-body {
+		background: #ccc;
+		padding: 0;
+	}
+
+	%ogpl-theme-site-menu-mb-pnl-padding-10-20 {
+		padding: 10px 20px;
+	}
+	%small-view-background-efefef {
+		background: #efefef;
+	}
+	.srch-pnl {
+		@extend %ogpl-theme-site-menu-mb-pnl-padding-10-20;
+		@extend %small-view-background-efefef;
+		.form-group {
+			float: left;
+			margin-right: 5px;
+			width: 75%;
+		}
+	}
+
+	%small-view-under-color-fff {
+		color: #fff;
+	}
+	#wb-srch-sub-imprt {
+		background: #555;
+		border-color: #555;
+		@extend %small-view-under-color-fff;
+		&:hover, &:focus, &:active {
+			background-color: #777;
+			border-color: #777;
+			@extend %small-view-under-color-fff;
+		}
+	}
+
+	.lng-ofr {
+		@extend %ogpl-theme-site-menu-mb-pnl-padding-10-20;
+		text-align: right;
+		@extend %small-view-background-efefef;
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+	}
+
+	.sec-pnl {
+		@extend %small-view-under-bg-color-fff;
+		@extend %ogpl-theme-site-menu-mb-pnl-padding-10-20;
+		@extend %small-view-background-efefef;
+	}
+
+	.sm-pnl {
+		background: #555;
+		@extend %ogpl-theme-site-menu-mb-pnl-padding-10-20;
+		a {
+			@extend %small-view-under-color-fff;
+		}
+		summary {
+			@extend %small-view-under-color-fff;
+			&:hover, &:focus {
+				@extend %small-view-under-color-fff;
+			}
+		}
+	}
+
+	.info-pnl {
+		@extend %ogpl-theme-site-menu-mb-pnl-padding-10-20;
 	}
 }
 
