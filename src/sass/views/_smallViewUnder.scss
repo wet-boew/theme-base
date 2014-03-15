@@ -39,6 +39,15 @@
 	}
 }
 
+%base-theme-site-menu-mb-pnl-padding-10-20 {
+	padding: 10px 20px;
+}
+%small-view-background-efefef {
+	background: #efefef;
+}
+%small-view-under-color-fff {
+	color: #fff;
+}
 #mb-pnl {	
 	header {
 		background-color: #555;
@@ -62,14 +71,8 @@
 		padding: 0;
 	}
 
-	%ogpl-theme-site-menu-mb-pnl-padding-10-20 {
-		padding: 10px 20px;
-	}
-	%small-view-background-efefef {
-		background: #efefef;
-	}
 	.srch-pnl {
-		@extend %ogpl-theme-site-menu-mb-pnl-padding-10-20;
+		@extend %base-theme-site-menu-mb-pnl-padding-10-20;
 		@extend %small-view-background-efefef;
 		.form-group {
 			float: left;
@@ -78,9 +81,6 @@
 		}
 	}
 
-	%small-view-under-color-fff {
-		color: #fff;
-	}
 	#wb-srch-sub-imprt {
 		background: #555;
 		border-color: #555;
@@ -93,7 +93,7 @@
 	}
 
 	.lng-ofr {
-		@extend %ogpl-theme-site-menu-mb-pnl-padding-10-20;
+		@extend %base-theme-site-menu-mb-pnl-padding-10-20;
 		text-align: right;
 		@extend %small-view-background-efefef;
 		a {
@@ -104,13 +104,13 @@
 
 	.sec-pnl {
 		@extend %small-view-under-bg-color-fff;
-		@extend %ogpl-theme-site-menu-mb-pnl-padding-10-20;
+		@extend %base-theme-site-menu-mb-pnl-padding-10-20;
 		@extend %small-view-background-efefef;
 	}
 
 	.sm-pnl {
 		background: #555;
-		@extend %ogpl-theme-site-menu-mb-pnl-padding-10-20;
+		@extend %base-theme-site-menu-mb-pnl-padding-10-20;
 		a {
 			@extend %small-view-under-color-fff;
 		}
@@ -123,7 +123,7 @@
 	}
 
 	.info-pnl {
-		@extend %ogpl-theme-site-menu-mb-pnl-padding-10-20;
+		@extend %base-theme-site-menu-mb-pnl-padding-10-20;
 	}
 }
 
