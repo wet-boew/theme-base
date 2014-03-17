@@ -48,7 +48,9 @@
 %small-view-under-color-fff {
 	color: #fff;
 }
-#mb-pnl {	
+$base-theme-mb-pnl-bg: #ccc;
+#mb-pnl {
+	background: $base-theme-mb-pnl-bg;
 	header {
 		background-color: #555;
 	}
@@ -67,7 +69,7 @@
 	}
 
 	.modal-body {
-		background: #ccc;
+		background: $base-theme-mb-pnl-bg;
 		padding: 0;
 	}
 
