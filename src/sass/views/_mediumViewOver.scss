@@ -124,11 +124,9 @@ body {
 			> {
 				li {
 					padding: 0;
-					border-left: 1px solid #202A33;
-    				border-right: 1px solid #474747;
+    				border-right: 1px solid #999;
 
 					&.active {
-						border-left-color: #CCC;
 						border-right-color: #CCC;
 					}
 				}
