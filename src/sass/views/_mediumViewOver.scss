@@ -113,6 +113,10 @@ body {
 	}
 }
 
+%base-theme-wb-sm-wb-navcurr {
+	background: #333;
+	color: #fff;
+}
 #wb-sm {
 	.nvbar {
 		background: #555;
@@ -125,7 +129,13 @@ body {
 				li {
 					padding: 0;
     				border-right: 1px solid #999;
-
+					> {
+						a {
+							&.wb-navcurr {
+								@extend %base-theme-wb-sm-wb-navcurr;
+							}
+						}
+					}
 					&.active {
 						border-right-color: #CCC;
 					}
@@ -161,7 +171,9 @@ body {
 			&:link {
 				text-decoration: none;
 			}
-
+			&.wb-navcurr {
+				@extend %base-theme-wb-sm-wb-navcurr;
+			}
 			&:hover, &:focus {
 				text-decoration: underline;
 			}
