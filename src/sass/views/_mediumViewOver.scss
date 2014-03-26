@@ -8,10 +8,6 @@
   @title: Medium view and over (screen only)
  */
 
-%page-background {
-	background-color: #FFF;
-}
-
 %submenu-colors {
 	background-color: #CCC;
 	color: #000;
@@ -30,14 +26,6 @@
 //	}
 //}
 //
-
-body {
-	background: #EEE;
-}
-
-#ogpl-logo {
-	padding: 10px 0;
-}
 
 #wb-bar {
 	min-height: 2.25em;
@@ -184,24 +172,6 @@ body {
 	}
 }
 
-#wb-bc {
-	.container {
-		@extend %page-background;
-	}
-}
-
-body {
-	> {
-		main {
-			@extend %page-background;
-		}
-
-		header + .container {
-			@extend %page-background;
-		}
-	}
-}
-
 %secmenu-base-theme-menuitem-curr-hover-focus {
 	background: darken($clrWhite, 50%);
 	color: lighten($clrDark, 75%);
@@ -246,16 +216,6 @@ body {
 				color: darken($clrDark, 50%);
 				padding-left: 1.8em;
 			}
-		}
-	}
-}
-
-footer {
-	background: #CF3F0E;
-	border-top: 1px solid #BBBBBB;
-	> {
-		.container {
-			background: #CCC;
 		}
 	}
 }

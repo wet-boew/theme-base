@@ -7,3 +7,38 @@
 /*
   @title: Small view and over (screen only)
  */
+%page-background {
+	background-color: #FFF;
+}
+
+body {
+	background: #EEE;
+}
+
+#wb-bc {
+	.container {
+		@extend %page-background;
+	}
+}
+
+body {
+	> {
+		main {
+			@extend %page-background;
+		}
+
+		header + .container {
+			@extend %page-background;
+		}
+	}
+}
+
+footer {
+	background: #CF3F0E;
+	border-top: 1px solid #BBBBBB;
+	> {
+		.container {
+			background: #CCC;
+		}
+	}
+}
