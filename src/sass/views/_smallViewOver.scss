@@ -27,8 +27,12 @@ body {
 			@extend %page-background;
 		}
 
-		header + .container {
-			@extend %page-background;
+		header {
+			+ {
+				.container {
+					@extend %page-background;
+				}
+			}
 		}
 	}
 }
