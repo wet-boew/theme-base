@@ -7,35 +7,31 @@
 /*
   @title: Small view and under (screen only)
  */
-
- 
 #wb-glb-mn {
 	padding: 0;
 
 	> ul {
 		margin: 10px 0;
-
 		a {
 			color: #FFF;
 			font-size: 1.5em;
 		}
 	}
-
 	.pnl-btn {
 		position: relative;
-		float: right;
-		width: 50%;
 		z-index: 2;
+		margin: 0;
+		float: right;
 		li {
-			padding: 3px 0 0;
+			padding: 0 10px;
 			width: 100%;
 		}
 		a {
-			color: #FFF;
 			font-size: 1.5em;
 			display: block;
 			width: 100%;
-			padding-right: 15px;
+			color: #474747;
+			line-height: 1em;
 		}
 	}
 }
