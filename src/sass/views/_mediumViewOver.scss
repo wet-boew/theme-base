@@ -133,12 +133,12 @@
 	}
 
 	.active {
-		a {
+		a, summary {
 			@extend %submenu-colors;
 		}
 	}
 	
-	a {
+	a, summary {
 		display: block;
 		color: #FFF;
 		font-weight: 700;
@@ -151,7 +151,7 @@
 		border-bottom: 4px solid #0F315B;
 		border-radius: 0 0 3px 3px;
 
-		a {
+		a, summary {
 			@extend %submenu-colors;
 			font-weight: 400;
 
