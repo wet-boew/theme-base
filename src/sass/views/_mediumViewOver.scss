@@ -132,10 +132,6 @@
 							// :focus not needed since already covered by the &.active state
 							&:hover {
 								@extend %submenu-colors;
-
-								.expicon {
-									border-top-color: #000;
-								}
 							}
 						}
 					}
