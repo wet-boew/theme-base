@@ -8,24 +8,14 @@
   @title: Medium view and over (screen only)
  */
 
+%medium-view-navigation-links {
+	@include navigation-links;
+} 
+
 %submenu-colors {
 	background-color: #CCC;
 	color: #000;
 }
-
-// TODO: Implement when libsass gets better placeholder support
-// %navigation-links {
-//	a {
-//		&:link {
-//			text-decoration: none;
-//		}
-//
-//		&:hover, &:focus {
-//			text-decoration: underline;
-//		}
-//	}
-//}
-//
 
 #wb-bar {
 	min-height: 2.25em;
@@ -44,6 +34,7 @@
 		list-style-type: none;
 		float: left;
 		padding: 6px 15px;
+
 		&:first-child {
 			border-left: none;
 		}
@@ -53,7 +44,7 @@
 		color: #FFF;
 		text-decoration: none;
 	}
-		
+
 	.curr {
 		display: block;
 		color: #ccc;
@@ -63,8 +54,6 @@
 			@extend %accessible-invisible;
 		}
 	}
-
-	
 }
 
 #wb-sttl {
@@ -118,6 +107,7 @@
 	ul {
 		&.menu {
 			margin-bottom: 0;
+
 			> {
 				li {
 					padding: 0;
@@ -145,12 +135,14 @@
 	}
 
 	.active {
-		a, summary {
+		a,
+		summary {
 			@extend %submenu-colors;
 		}
 	}
 	
-	a, summary {
+	a,
+	summary {
 		display: block;
 		color: #FFF;
 		font-weight: 700;
@@ -163,21 +155,14 @@
 		border-bottom: 4px solid #0F315B;
 		border-radius: 0 0 3px 3px;
 
-		a, summary {
+		a,
+		summary {
+			@extend %medium-view-navigation-links;
 			@extend %submenu-colors;
 			font-weight: 400;
 
-			// TODO: Implement %navigation-links when libsass gets better placeholder support
-			&:link {
-				text-decoration: none;
-			}
-
 			&.wb-navcurr {
 				@extend %base-theme-wb-sm-wb-navcurr;
-			}
-
-			&:hover, &:focus {
-				text-decoration: underline;
 			}
 		}
 
