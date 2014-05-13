@@ -7,6 +7,9 @@
 /*
   @title: All screen views
  */
+%all-view-navigation-links {
+	@include navigation-links;
+}
 
 %no-breadcrumb-icon {
 	content: none;
@@ -23,6 +26,7 @@ body {
 
 #wb-bar {
 	background: #555;
+
 	> {
 		.container {
 			background: #333;
@@ -40,17 +44,10 @@ body {
 
 #wb-sttl {
 	a {
+		@extend %all-view-navigation-links;
 		color: #FFFFFF !important;
-
-		// TODO: Implement %navigation-links when libsass gets better placeholder support
-		&:link {
-			text-decoration: none;
-		}
-
-		&:hover, &:focus {
-			text-decoration: underline;
-		}
 	}
+
 	small {
 		display: block;
 		font-size: 0.4em;
@@ -65,11 +62,13 @@ body {
 	}
 
 	li {
-		&:before, &:after {
+		&:before,
+		&:after {
 			font-family: "Glyphicons Halflings";
 			font-size: 0.7em;
 			color: #333;
 		}
+
 		&:before {
 			content: "\e092";
 		}
@@ -98,10 +97,12 @@ body {
 			&:before {
 				@extend %no-breadcrumb-icon;
 			}
+
 			&:after {
 				content: "\e091";
 				padding: 0 5px;
 			}
+
 			&:first-child {
 				&:after {
 					@extend %no-breadcrumb-icon;
