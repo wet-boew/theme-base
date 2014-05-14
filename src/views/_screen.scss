@@ -19,7 +19,7 @@
 body {
 	> {
 		header {
-			background: #CCC;
+			background: #ccc;
 		}
 	}
 }
@@ -37,7 +37,7 @@ body {
 #wb-bnr {
 	> {
 		.container {
-			background: #CF3F0E;
+			background: #cf3f0e;
 		}
 	}
 }
@@ -45,7 +45,7 @@ body {
 #wb-sttl {
 	a {
 		@extend %all-view-navigation-links;
-		color: #FFFFFF !important;
+		color: #fff !important;
 	}
 
 	small {
@@ -57,16 +57,16 @@ body {
 
 #wb-bc {
 	.breadcrumb {
-		margin-bottom: 0;
 		background: transparent;
+		margin-bottom: 0;
 	}
 
 	li {
 		&:before,
 		&:after {
+			color: #333;
 			font-family: "Glyphicons Halflings";
 			font-size: 0.7em;
-			color: #333;
 		}
 
 		&:before {
