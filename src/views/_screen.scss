@@ -46,6 +46,7 @@ body {
 	a {
 		@extend %all-view-navigation-links;
 		color: #fff !important;
+		text-decoration: none;
 	}
 
 	small {
