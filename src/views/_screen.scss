@@ -24,6 +24,18 @@ body {
 	}
 }
 
+.wb-sl {
+	color: #fff;
+	font-weight: 700;
+	padding: 5px;
+
+	&:focus {
+		color: #fff;
+		text-decoration: none;
+		z-index: 501;
+	}
+}
+
 #wb-bar {
 	background: #555;
 
