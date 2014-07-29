@@ -67,6 +67,91 @@ body {
 	}
 }
 
+%base-theme-wb-sm-wb-navcurr {
+	background: #333;
+	color: #fff;
+}
+
+%submenu-colors {
+	background-color: #ccc;
+	color: #000;
+}
+
+#wb-sm {
+	.nvbar {
+		background: #555;
+	}
+
+	ul {
+		&.menu {
+			margin-bottom: 0;
+
+			> {
+				li {
+					border-right: 1px solid #999;
+					padding: 0;
+
+					> {
+						a {
+							&.wb-navcurr {
+								@extend %base-theme-wb-sm-wb-navcurr;
+							}
+
+							// :focus not needed since already covered by the &.active state
+							&:hover {
+								@extend %submenu-colors;
+							}
+						}
+					}
+
+					&.active {
+						border-right-color: #ccc;
+					}
+				}
+			}
+		}
+	}
+
+	.active {
+		a,
+		summary {
+			@extend %submenu-colors;
+		}
+	}
+
+	a,
+	summary {
+		color: #fff;
+		display: block;
+		font-weight: 700;
+		padding: 0.48em 0.79em;
+		text-decoration: none;
+	}
+
+	.sm {
+		@extend %submenu-colors;
+		border-bottom: 4px solid #0f315b;
+		border-radius: 0 0 3px 3px;
+
+		a,
+		summary {
+			@extend %medium-view-navigation-links;
+			@extend %submenu-colors;
+			font-weight: 400;
+
+			&.wb-navcurr {
+				@extend %base-theme-wb-sm-wb-navcurr;
+			}
+		}
+
+		.slflnk {
+			a {
+				background: #bbb;
+			}
+		}
+	}
+}
+
 #wb-bc {
 	.breadcrumb {
 		background: transparent;
