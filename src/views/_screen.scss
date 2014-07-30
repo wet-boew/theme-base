@@ -139,14 +139,16 @@ body {
 			@extend %submenu-colors;
 			font-weight: 400;
 
-			&.wb-navcurr {
-				@extend %base-theme-wb-sm-wb-navcurr;
-			}
+			
 		}
 
 		.slflnk {
 			a {
 				background: #bbb;
+				
+				&.wb-navcurr {
+					@extend %base-theme-wb-sm-wb-navcurr;
+				}
 			}
 		}
 	}
