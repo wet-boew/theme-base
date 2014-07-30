@@ -147,6 +147,10 @@ body {
 		.slflnk {
 			a {
 				background: #bbb;
+
+				&.wb-navcurr {
+					@extend %base-theme-wb-sm-wb-navcurr;
+				}
 			}
 		}
 	}
