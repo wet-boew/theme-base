@@ -60,7 +60,6 @@
 		span {
 			display: table-cell;
 			line-height: normal;
-			padding-left: 10px;
 			vertical-align: middle;
 		}
 	}
@@ -150,5 +149,9 @@
 [dir=rtl] {
 	#wb-srch {
 		text-align: left;
+	}
+
+	#wb-sttl {
+		float: right;
 	}
 }
