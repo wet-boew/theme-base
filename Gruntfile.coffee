@@ -255,6 +255,7 @@ module.exports = (grunt) ->
 						templates: [
 							"site/pages/*.hbs"
 							"!site/pages/splashpage*.hbs"
+							"!site/pages/index*.hbs"
 						]
 				dest: "dist/unmin/"
 				src: "!*.*"
@@ -273,6 +274,7 @@ module.exports = (grunt) ->
 							"**/*.hbs"
 							"!*.hbs"
 							"splashpage*.hbs"
+							"index*.hbs"
 						]
 						dest: "dist/unmin"
 					,
@@ -316,6 +318,7 @@ module.exports = (grunt) ->
 						templates: [
 							"site/pages/*.hbs"
 							"!site/pages/splashpage*.hbs"
+							"!site/pages/index*.hbs"
 						]
 				dest: "dist/"
 				src: "!*.*"
@@ -335,6 +338,7 @@ module.exports = (grunt) ->
 							"**/*.hbs"
 							"!*.hbs"
 							"splashpage*.hbs"
+							"index*.hbs"
 						]
 						dest: "dist"
 					,
