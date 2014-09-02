@@ -2,10 +2,6 @@ language: node_js
 node_js:
   - '0.10'
 
-env:
-  global:
-    - secure: "PybWgSynVvImOrdX0PFNt5eSqPDyLthWkAG2GsQ1Uz48WoQ2CWxU0HGvGfguM87T+0r44N/ULqTPc02jcQqLsxZbK7UIF3jVZUi1ugY9YqVzMZzxX4M81/EK/SFTLJ6tEvfH/W4+to/wmRqJzwyafxdkP4QZkrilFEPPleXScMw="
-
 install:
   - script/setup
   - gem install scss-lint --no-ri --version '=0.24.0'
