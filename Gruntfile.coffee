@@ -36,6 +36,7 @@ module.exports = (grunt) ->
 		"build"
 		"Produces unminified files"
 		[
+			"checkDependencies"
 			"clean:dist"
 			"i18n_csv"
 			"copy:wetboew"
