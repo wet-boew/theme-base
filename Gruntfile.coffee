@@ -409,6 +409,7 @@ module.exports = (grunt) ->
 			options:
 				cwd: "lib/wet-boew"
 				failOnError: false
+				isDevelopment: true
 
 		connect:
 			options:
