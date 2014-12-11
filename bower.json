@@ -1,6 +1,6 @@
 {
   "name": "theme-base",
-  "version": "4.0.9-development",
+  "version": "4.0.9",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -12,7 +12,7 @@
     "lib"
   ],
   "devDependencies": {
-    "wet-boew": "https://github.com/wet-boew/wet-boew.git#master"
+    "wet-boew": "https://github.com/wet-boew/wet-boew.git#4.0.9"
   },
   "homepage": "https://github.com/wet-boew/theme-base",
   "authors": [
