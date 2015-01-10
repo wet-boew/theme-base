@@ -82,6 +82,7 @@ module.exports = (grunt) ->
 		[
 			"sass"
 			"autoprefixer"
+			"usebanner:css"
 			"cssmin"
 		]
 	)
@@ -198,10 +199,10 @@ module.exports = (grunt) ->
 				expand: true
 
 		sass:
-			base:
+			all:
 				expand: true
 				cwd: "src"
-				src: "*theme.scss"
+				src: "*.scss"
 				dest: "dist/unmin/css"
 				ext: ".css"
 
@@ -209,20 +210,39 @@ module.exports = (grunt) ->
 			options:
 				browsers: [
 					"last 2 versions"
-					"ff >= 17"
-					"opera 12.1"
-					"bb >= 7"
 					"android >= 2.3"
+					"bb >= 7"
+					"ff >= 17"
 					"ie >= 8"
 					"ios 5"
+					"opera 12.1"
 				]
-			all:
+			modern:
 				cwd: "dist/unmin/css"
 				src: [
-					"*theme*.css"
+					"*.css"
+					"!ie8*.css"
 				]
 				dest: "dist/unmin/css"
 				expand: true
+			oldIE:
+				options:
+					browsers: [
+						"ie 8"
+					]
+				cwd: "dist/unmin/css"
+				src: [
+					"ie8*.css"
+				]
+				dest: "dist/unmin/css"
+				expand: true
+
+		usebanner:
+			css:
+				options:
+					banner: "@charset \"utf-8\";\n<%= banner %>"
+				files:
+					src: "dist/unmin/css/*.*"
 
 		cssmin:
 			theme:
@@ -415,6 +435,7 @@ module.exports = (grunt) ->
 	# These plugins provide necessary tasks.
 	@loadNpmTasks "assemble"
 	@loadNpmTasks "grunt-autoprefixer"
+	@loadNpmTasks "grunt-banner"
 	@loadNpmTasks "grunt-check-dependencies"
 	@loadNpmTasks "grunt-contrib-clean"
 	@loadNpmTasks "grunt-contrib-connect"
