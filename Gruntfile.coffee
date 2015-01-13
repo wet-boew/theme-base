@@ -246,8 +246,6 @@ module.exports = (grunt) ->
 
 		cssmin:
 			theme:
-				options:
-					banner: "<%= banner %>"
 				expand: true
 				cwd: "dist/unmin/css/"
 				src: "*theme*.css"
