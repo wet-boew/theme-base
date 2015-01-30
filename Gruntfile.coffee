@@ -84,6 +84,7 @@ module.exports = (grunt) ->
 			"autoprefixer"
 			"usebanner:css"
 			"cssmin"
+			"cssmin_ie8_clean"
 		]
 	)
 
@@ -248,8 +249,17 @@ module.exports = (grunt) ->
 			theme:
 				expand: true
 				cwd: "dist/unmin/css/"
-				src: "*theme*.css"
+				src: "*.css"
 				ext: ".min.css"
+				dest: "dist/css"
+
+		cssmin_ie8_clean:
+			min:
+				expand: true
+				cwd: "dist/css"
+				src: [
+					"**/ie8*.min.css"
+				]
 				dest: "dist/css"
 
 		# Minify
@@ -443,6 +453,7 @@ module.exports = (grunt) ->
 	@loadNpmTasks "grunt-contrib-htmlmin"
 	@loadNpmTasks "grunt-contrib-uglify"
 	@loadNpmTasks "grunt-contrib-watch"
+	@loadNpmTasks "grunt-cssmin-ie8-clean"
 	@loadNpmTasks "grunt-gh-pages"
 	@loadNpmTasks "grunt-hub"
 	@loadNpmTasks "grunt-i18n-csv"
