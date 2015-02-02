@@ -14,6 +14,9 @@
 /*
  Views
  */
+/* All views */
+@import "views/base";
+
 /* All screen views */
 @media screen {
 	@import "views/screen";
