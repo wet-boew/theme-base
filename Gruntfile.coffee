@@ -92,7 +92,6 @@ module.exports = (grunt) ->
 		"assets-dist"
 		"INTERNAL: Process non-CSS/JS assets to dist"
 		[
-			"copy:assets_min"
 			"copy:wetboew_demo_min"
 		]
 	)
@@ -180,17 +179,12 @@ module.exports = (grunt) ->
 				expand: true
 				cwd: "src/assets"
 				src: "**/*.*"
-				dest: "dist/unmin/assets"
-			assets_min:
-				expand: true
-				cwd: "src/assets"
-				src: "**/*.*"
 				dest: "dist/assets"
 			js:
 				expand: true
 				cwd: "src"
 				src: "**/*.js"
-				dest: "dist/unmin/js"
+				dest: "dist/js"
 			deploy:
 				src: [
 					"*.txt"
@@ -204,7 +198,7 @@ module.exports = (grunt) ->
 				expand: true
 				cwd: "src"
 				src: "*.scss"
-				dest: "dist/unmin/css"
+				dest: "dist/css"
 				ext: ".css"
 
 		autoprefixer:
@@ -219,23 +213,23 @@ module.exports = (grunt) ->
 					"opera 12.1"
 				]
 			modern:
-				cwd: "dist/unmin/css"
+				cwd: "dist/css"
 				src: [
 					"*.css"
 					"!ie8*.css"
 				]
-				dest: "dist/unmin/css"
+				dest: "dist/css"
 				expand: true
 			oldIE:
 				options:
 					browsers: [
 						"ie 8"
 					]
-				cwd: "dist/unmin/css"
+				cwd: "dist/css"
 				src: [
 					"ie8*.css"
 				]
-				dest: "dist/unmin/css"
+				dest: "dist/css"
 				expand: true
 
 		usebanner:
@@ -243,12 +237,12 @@ module.exports = (grunt) ->
 				options:
 					banner: "@charset \"utf-8\";\n<%= banner %>"
 				files:
-					src: "dist/unmin/css/*.*"
+					src: "dist/css/*.*"
 
 		cssmin:
 			theme:
 				expand: true
-				cwd: "dist/unmin/css/"
+				cwd: "dist/css/"
 				src: "*.css"
 				ext: ".min.css"
 				dest: "dist/css"
@@ -301,13 +295,13 @@ module.exports = (grunt) ->
 				]
 				layoutdir: "site/layouts"
 				layout: "default.hbs"
+				environment:
+						jqueryVersion: "<%= jqueryVersion.version %>"
+						jqueryOldIEVersion: "<%= jqueryOldIEVersion.version %>"
+				assets: "dist"
 
 			theme:
 				options:
-					assets: "dist/unmin"
-					environment:
-						jqueryVersion: "<%= jqueryVersion.version %>"
-						jqueryOldIEVersion: "<%= jqueryOldIEVersion.version %>"
 					flatten: true,
 					plugins: ["assemble-contrib-i18n"]
 					i18n:
@@ -319,15 +313,10 @@ module.exports = (grunt) ->
 							"!site/pages/404*.hbs"
 							"!site/pages/servermessage-*.hbs"
 						]
-				dest: "dist/unmin/"
+				dest: "dist"
 				src: "!*.*"
 
 			demos:
-				options:
-					assets: "dist/unmin"
-					environment:
-						jqueryVersion: "<%= jqueryVersion.version %>"
-						jqueryOldIEVersion: "<%= jqueryOldIEVersion.version %>"
 				files: [
 						#site
 						expand: true
