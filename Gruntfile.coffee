@@ -126,7 +126,7 @@ module.exports = (grunt) ->
 			htmlFiles.forEach(
 				( file ) ->
 					contents = grunt.file.read( file )
-					contents = contents.replace( /\/unmin/g, "" )
+					contents = contents.replace( /\.\.\/\//g, "./" )
 					contents = contents.replace( /\"(?!https:)([^\"]*)?\.(js|css)\"/g, "\"$1.min.$2\"" )
 
 					grunt.file.write(file, contents);
@@ -298,7 +298,7 @@ module.exports = (grunt) ->
 				environment:
 						jqueryVersion: "<%= jqueryVersion.version %>"
 						jqueryOldIEVersion: "<%= jqueryOldIEVersion.version %>"
-				assets: "dist"
+				assets: "dist/"
 
 			theme:
 				options:
