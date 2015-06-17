@@ -4,6 +4,7 @@
 	"tagline": "Collaborative open source project led by the Government of Canada",
 	"wetSiteRoot": "http://wet-boew.github.io/v4.0-ci",
 	"repository": "theme-base",
+	"theme": "theme-base",
 	"langs": [
 		{
 			"lang-code": "en",
