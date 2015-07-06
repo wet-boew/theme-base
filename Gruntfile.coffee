@@ -48,15 +48,6 @@ module.exports = (grunt) ->
 	)
 
 	@registerTask(
-		"init"
-		"Only needed when the repo is first cloned"
-		[
-			"install-dependencies"
-			"hub"
-		]
-	)
-
-	@registerTask(
 		"deploy"
 		"Build and deploy artifacts to wet-boew-dist"
 		->
@@ -155,9 +146,9 @@ module.exports = (grunt) ->
 		copy:
 			wetboew:
 				expand: true
-				cwd: "lib/wet-boew/dist"
+				cwd: "lib/wet-boew-dist/"
 				src: [
-					"wet-boew/**/*.*"
+					"**/*.*"
 					"**/ajax/**/*.*"
 				]
 				dest: "dist"
@@ -407,21 +398,6 @@ module.exports = (grunt) ->
 				]
 				dest: "dist"
 				expand: true
-
-		hub:
-			"wet-boew":
-				src: [
-					"lib/wet-boew/Gruntfile.coffee"
-				]
-				tasks: [
-					"dist"
-				]
-
-		"install-dependencies":
-			options:
-				cwd: "lib/wet-boew"
-				failOnError: false
-				isDevelopment: true
 
 		connect:
 			options:

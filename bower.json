@@ -12,7 +12,8 @@
     "lib"
   ],
   "devDependencies": {
-    "wet-boew": "https://github.com/wet-boew/wet-boew.git#master"
+    "wet-boew": "https://github.com/wet-boew/wet-boew.git#master",
+    "wet-boew-dist": "https://github.com/wet-boew/wet-boew-dist.git#v4.0-dist"
   },
   "homepage": "https://github.com/wet-boew/theme-base",
   "authors": [
