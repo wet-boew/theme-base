@@ -23,12 +23,12 @@
 	.breadcrumb {
 		margin-bottom: 0;
 	}
-	
-	a[href]:after {
+
+	[href]:after {
 		content: "";
 	}
 }
- 
+
 h1 {
 	margin-top: 0;
 }
