@@ -1,6 +1,6 @@
 {
   "name": "theme-base",
-  "version": "4.0.20-development",
+  "version": "4.0.20+2-development",
   "license": "MIT",
   "ignore": [
     "**/.*",
