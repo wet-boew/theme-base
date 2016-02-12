@@ -8,9 +8,8 @@
   @title: All views
  */
 
-%no-breadcrumb-icon {
-	content: none;
-	padding: 0;
+%breadcrumb-no-icon {
+	display: none;
 }
 
 #wb-bc {
@@ -20,41 +19,34 @@
 	}
 
 	li {
-		&:before,
-		&:after {
-			color: #333;
-			font-family: "Glyphicons Halflings";
-			font-size: 0.7em;
-		}
-
 		&:before {
+			color: #333;
 			content: "\e092";
+			font: {
+				family: "Glyphicons Halflings";
+				size: 0.7em;
+			}
 		}
 
 		&:first-child {
 			&:before {
-				@extend %no-breadcrumb-icon;
+				@extend %breadcrumb-no-icon;
 			}
 		}
 	}
 }
 
-
 [dir=rtl] {
 	#wb-bc {
 		li {
 			&:before {
-				@extend %no-breadcrumb-icon;
-			}
-
-			&:after {
 				content: "\e091";
-				padding: 0 5px;
+				display: inline-block;
 			}
 
 			&:first-child {
-				&:after {
-					@extend %no-breadcrumb-icon;
+				&:before {
+					@extend %breadcrumb-no-icon;
 				}
 			}
 		}
