@@ -355,6 +355,8 @@ module.exports = (grunt) ->
 				src: "!*.*"
 
 			demos:
+				options:
+					languages: "<%= i18n_csv.list_locales.locales %>"
 				files: [
 						#site
 						expand: true
