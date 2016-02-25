@@ -11,15 +11,15 @@
 <section>
 	<h2>Table of contents</h2>
 	<ul>
-{{#withSort site.langs "lang-en"}}
-		<li><a href="#{{lang-code}}">{{lang-en}}</a></li>
+{{#withSort languages}}
+		<li><a href="#{{lang-code}}">{{#with ..}}{{i18n "lang-en" language=../this}}{{/with}}</a></li>
 {{/withSort}}
 	</ul>
 </section>
 
-{{#withSort site.langs "lang-en"}}
+{{#withSort languages}}
 <section>
-	<h2 id="{{lang-code}}">{{lang-en}}</h2>
+	<h2 id="{{lang-code}}">{{#with ..}}{{i18n "lang-en" language=../this}}{{/with}}</h2>
 	<ul>
 		<li><a href="content-{{lang-code}}.html">Content page</a></li>
 		<li><a href="content-secmenu-{{lang-code}}.html">Content page - Secondary menu</a></li>
