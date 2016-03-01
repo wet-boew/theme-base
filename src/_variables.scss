@@ -9,6 +9,9 @@ $banner-gradient-start: #4065b3;
 $banner-gradient-end: #33479e;
 $base-theme-mb-pnl-bg: #ccc;
 
+//Breadcrumb
+$breadcrumb-bg: #fff; // Inner background colour (Bootstrap override).
+
 @mixin navigation-links {
 	a {
 		&:link,

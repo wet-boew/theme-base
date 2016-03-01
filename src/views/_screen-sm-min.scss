@@ -29,12 +29,6 @@ body {
 	}
 }
 
-#wb-bc {
-	.container {
-		@extend %page-background;
-	}
-}
-
 footer {
 	background: #cf3f0e;
 	border-top: 1px solid #bbb;
