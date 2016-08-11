@@ -36,11 +36,11 @@
 	}
 }
 
-%small-view-background-efefef {
+%small-view-background {
 	background: #efefef;
 }
 
-%small-view-under-color-fff {
+%small-view-under-color {
 	color: #fff;
 }
 
@@ -71,7 +71,7 @@
 	}
 
 	.srch-pnl {
-		@extend %small-view-background-efefef;
+		@extend %small-view-background;
 
 		.form-group {
 			float: left;
@@ -81,21 +81,21 @@
 	}
 
 	#wb-srch-sub-imprt {
-		@extend %small-view-under-color-fff;
+		@extend %small-view-under-color;
 		background: #555;
 		border-color: #555;
 
 		&:hover,
 		&:focus,
 		&:active {
-			@extend %small-view-under-color-fff;
+			@extend %small-view-under-color;
 			background-color: #777;
 			border-color: #777;
 		}
 	}
 
 	.lng-ofr {
-		@extend %small-view-background-efefef;
+		@extend %small-view-background;
 
 		a {
 			color: #000;
@@ -104,23 +104,23 @@
 	}
 
 	.sec-pnl {
-		@extend %small-view-under-bg-color-fff;
-		@extend %small-view-background-efefef;
+		@extend %small-view-under-color;
+		@extend %small-view-background;
 	}
 
 	.sm-pnl {
 		background: #555;
 
 		a {
-			@extend %small-view-under-color-fff;
+			@extend %small-view-under-color;
 		}
 
 		summary {
-			@extend %small-view-under-color-fff;
+			@extend %small-view-under-color;
 
 			&:hover,
 			&:focus {
-				@extend %small-view-under-color-fff;
+				@extend %small-view-under-color;
 			}
 		}
 	}

@@ -7,3 +7,10 @@
 /*
   @title: All views
  */
+#wb-lng {
+	.curr {
+		span {
+			@extend %accessible-invisible;
+		}
+	}
+}
