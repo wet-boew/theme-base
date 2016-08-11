@@ -130,7 +130,7 @@ body {
 
 		a,
 		summary {
-			@extend %medium-view-navigation-links;
+			@extend %all-view-navigation-links;
 			@extend %submenu-colors;
 			font-weight: 400;
 
