@@ -7,22 +7,12 @@
 /*
   @title: Small view and over (screen only)
  */
-%page-background {
-	background-color: #fff;
-}
-
 body {
-	background: #eee;
-
-	main {
-		@extend %page-background;
-	}
-
 	> {
 		header {
 			+ {
 				.container {
-					@extend %page-background;
+					background-color: $main-bg;
 				}
 			}
 		}

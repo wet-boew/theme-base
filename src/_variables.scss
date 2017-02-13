@@ -5,12 +5,18 @@
  *
  */
 
-$banner-gradient-start: #4065b3;
-$banner-gradient-end: #33479e;
-$base-theme-mb-pnl-bg: #ccc;
+// Body
+$body-bg: #eee; // Body element's background colour (Bootstrap override).
 
 //Breadcrumb
 $breadcrumb-bg: #fff; // Inner background colour (Bootstrap override).
+
+// Main
+$main-bg: #fff; // Main element's background colour (WET override).
+
+$banner-gradient-start: #4065b3;
+$banner-gradient-end: #33479e;
+$base-theme-mb-pnl-bg: #ccc;
 
 @mixin navigation-links {
 	a {
