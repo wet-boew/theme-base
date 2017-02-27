@@ -7,18 +7,6 @@
 /*
   @title: Small view and over (screen only)
  */
-body {
-	> {
-		header {
-			+ {
-				.container {
-					background-color: $main-bg;
-				}
-			}
-		}
-	}
-}
-
 footer {
 	background: #cf3f0e;
 	border-top: 1px solid #bbb;
