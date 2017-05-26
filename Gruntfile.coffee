@@ -51,11 +51,19 @@ module.exports = (grunt) ->
 	)
 
 	@registerTask(
+		"fetchDist"
+		"Fetches pre-built core dist"
+		[
+			"wb-fetchdist"
+		]
+	)
+
+	@registerTask(
 		"init"
 		"Only needed when the repo is first cloned"
 		[
 			"install-dependencies"
-			"hub"
+			"fetchDist"
 		]
 	)
 
@@ -469,6 +477,18 @@ module.exports = (grunt) ->
 					"!dist/unmin/test/*.html"
 				]
 
+		"wb-fetchdist":
+			core:
+				options:
+					dest: "lib/wet-boew/dist"
+					fallbackTask: "hub"
+
+		"install-dependencies":
+			options:
+				cwd: "lib/wet-boew"
+				failOnError: false
+				isDevelopment: true
+
 		hub:
 			"wet-boew":
 				src: [
@@ -477,12 +497,6 @@ module.exports = (grunt) ->
 				tasks: [
 					"dist"
 				]
-
-		"install-dependencies":
-			options:
-				cwd: "lib/wet-boew"
-				failOnError: false
-				isDevelopment: true
 
 		connect:
 			options:
