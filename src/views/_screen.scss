@@ -62,6 +62,11 @@ body {
 	}
 }
 
+#wb-srch-sub {
+	float: right;
+	margin-left: 5px;
+}
+
 %base-theme-wb-sm-wb-navcurr {
 	background: #333;
 	color: #fff;
@@ -162,6 +167,14 @@ body {
 }
 
 [dir=rtl] {
+	#wb-srch-sub {
+		float: left;
+		margin: {
+			left: 0;
+			right: 5px;
+		}
+	}
+
 	#wb-dtmd {
 		float: left;
 	}
