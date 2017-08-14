@@ -70,6 +70,10 @@
 		padding: 0;
 	}
 
+	.modal-footer {
+		background: $base-theme-mb-pnl-bg;
+	}
+
 	.srch-pnl {
 		@extend %small-view-background;
 
