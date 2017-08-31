@@ -17,6 +17,7 @@ run () {
 	  -e HTTPS_PROXY=$HTTP_PROXY \
 	  -e http_proxy=$HTTP_PROXY \
 	  -e https_proxy=$HTTP_PROXY \
+      -e NPM_CONFIG_LOGLEVEL=warn \
 	  --env-file "${PWD}/script/docker/env" \
 	  --sig-proxy=true \
 	  --pid=host \
