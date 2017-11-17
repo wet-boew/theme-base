@@ -113,6 +113,7 @@ module.exports = (grunt) ->
 		"test"
 		"INTERNAL: Runs testing tasks except for SauceLabs testing"
 		[
+			"eslint"
 			"sasslint"
 		]
 	)
@@ -470,6 +471,15 @@ module.exports = (grunt) ->
 					"!dist/unmin/assets/**/*.html"
 					"!dist/unmin/demos/menu/demo/*.html"
 					"!dist/unmin/test/*.html"
+				]
+
+		eslint:
+			options:
+				configFile: if process.env.CI == "true" then "lib/wet-boew/.eslintrc.ci.json" else "lib/wet-boew/.eslintrc.json"
+				quiet: true
+			all:
+				src: [
+					"src/**/*.js"
 				]
 
 		hub:
